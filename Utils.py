@@ -1,13 +1,13 @@
 
 from cgitb import text
 from cmath import e
-from socket import *
 from tkinter import *
 from tkinter import ttk
 # from tkinter import _ScreenUnits
 from tkinter.tix import ROW
 from turtle import width
 from mysqlx import Row
+
 from numpy import insert
 
 
@@ -42,25 +42,21 @@ class redes:
         self2.title('Redaccion Correo')
         self2.eval('tk::PlaceWindow . center')
         
-        frame1 = LabelFrame(self2)
-        frame1.grid(row = 0, column = 0, columnspan = 2 , pady=5 , padx=5 , sticky=W)
-        Label(frame1,text='From '+'   Limon@gmail.com').grid(row = 1, column = 0 , padx=(0,5) )
-        
         frame2 = LabelFrame(self2)
-        frame2.grid(row = 1, column = 0, columnspan = 2 , pady=5 , padx=5 , sticky=W+E)
+        frame2.grid(row = 0, column = 0, columnspan = 2 , pady=5 , padx=5 , sticky=W+E)
         Label(frame2,text='To').grid(row = 1, column = 0 )
         self2.To = Entry(frame2,width=104)
         self2.To.focus()
         self2.To.grid(row = 1, column = 1 , padx=15 , pady=5 , sticky=W+E)
         
         frame3 = LabelFrame(self2)
-        frame3.grid(row = 2, column = 0, columnspan = 2, pady=5 , padx=5 , sticky=W+E)
+        frame3.grid(row = 1, column = 0, columnspan = 2, pady=5 , padx=5 , sticky=W+E)
         Label(frame3,text='Subject').grid(row = 1, column = 0 )
         self2.Subject = Entry(frame3,width=100)
         self2.Subject.grid(row = 1, column = 1 , padx=15 , pady=5 ,sticky=W+E)
         
         frame4 = LabelFrame(self2)
-        frame4.grid(row = 3, column = 0, columnspan = 2, pady = 5 , sticky=W+E , padx=5)
+        frame4.grid(row = 2, column = 0, columnspan = 2, pady = 5 , sticky=W+E , padx=5)
         Label(frame4).grid(row = 1, column = 0 )
         self2.Messaje = Entry(frame4 ,width=110)
         self2.Messaje.grid(row = 1, column = 1 , padx=15 , pady=5 , sticky=W+E)
@@ -77,11 +73,6 @@ class redes:
         
     def actualizarCorreo(self):
         self.tree.insert('', 0 , text='Eo',values=self.name.get())
-        
-    
-    def d(self):
-        self.tree.insert('', 0 , text='Eo',values=self.name.get())
-                
         
         
 
