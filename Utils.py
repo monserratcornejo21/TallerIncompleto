@@ -73,6 +73,5 @@ class redes:
         
     def actualizarCorreo(self):
         self.tree.insert('', 0 , text='Eo',values=self.name.get())
-        
-        
-
+    def d(self):
+        self.tree.insert('', 0 , text='Eo',values=self.name.get())
