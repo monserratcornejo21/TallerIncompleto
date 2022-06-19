@@ -1,5 +1,5 @@
 import socket
-from RecEnv import enviar,recibir 
+from Utils import enviar,recibir 
 
 host = "ayredes.ddns.net"
 port = 110
@@ -9,9 +9,8 @@ conexion = socket.socket(ipv4, tcp)
 conexion.connect((host, port))
 recibir(conexion)
 
-def ListarCorreos(user, password):
+def ListarCorreos():
     
-    IniciarSesion(user,password)
     enviar(conexion,"LIST\n")
     return recibir(conexion,1)
 
@@ -21,7 +20,8 @@ def IniciarSesion(user, password):
     recibir(conexion)
     
     enviar(conexion,"PASS {}\n".format(password))
-    recibir(conexion)
+    recibir(conexion,1)
+    return recibir
 
 def Funciones(opt:int,id):
     
