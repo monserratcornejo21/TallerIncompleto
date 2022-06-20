@@ -1,5 +1,5 @@
 import socket
-from Utils import enviar,recibir 
+from Utils2 import enviar,recibir 
 
 host = "ayredes.ddns.net"
 port = 110
@@ -20,8 +20,7 @@ def IniciarSesion(user, password):
     recibir(conexion)
     
     enviar(conexion,"PASS {}\n".format(password))
-    recibir(conexion,1)
-    return recibir
+    return recibir(conexion,1)
 
 def Funciones(opt:int,id):
     

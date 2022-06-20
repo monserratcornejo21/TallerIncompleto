@@ -1,5 +1,5 @@
 import socket
-from Utils import enviar,recibir
+from Utils2 import enviar,recibir
 
 host = socket.gethostbyname('DESKTOP-6L6O5MA')
 port = 25
