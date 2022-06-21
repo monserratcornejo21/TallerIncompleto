@@ -12,7 +12,7 @@ from Utils import redes
 
 
 if __name__ == '__main__':
-    print("ohh shit, here we go again")
+    print("Abrir consola pra enviar correo")
     window=Tk()
     redes(window)
     window.mainloop()
